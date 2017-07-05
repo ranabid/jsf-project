@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" xmlns:b="http://bootsfaces.net/ui">
+
+<h:head>
+	<title>Home</title>
+</h:head>
+
+<h:body style="padding-top: 50px;">
+
+	<b:modal id="amodal" title="${homeBean.fileName}"
+		styleClass="modalPseudoClass" size="modal-lg">
+		<b:row>
+<!-- 			<b:video small-screen="full" autoplay="true" -->
+<!-- 				src="http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/b1-1.mov" -->
+<!-- 				onplay="ajax:videoBean.onPlay()" onpause="ajax:videoBean.onPause()" -->
+<!-- 				onloadeddata="ajax:videoBean.onLoadedData()" -->
+<!-- 				oncanplaythrough="ajax:videoBean.onCanplaythrough()" -->
+<!-- 				onseeking="ajax:videoBean.onSeeking()" style="width:100%"> -->
+<!-- 			</b:video> -->
+
+<!-- 			<b:video small-screen="full" autoplay="true" -->
+<!-- 				src="http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/b1-1.mov" -->
+<!-- 				style="width:100%"> -->
+<!-- 			</b:video> -->
+				<video></video>
+		</b:row>
+		<!-- 			<f:facet name="footer"> -->
+		<!-- 				<b:button value="Close" dismiss="modal" /> -->
+		<!-- 			</f:facet> -->
+
+	</b:modal>
+
+	<h:form>
+		<b:container fluid="true">
+			<b:jumbotron>
+				<p:panel>
+					<b:row>
+						<b:column col-xs="4" col-md="4">
+							<b:thumbnail small-screen="full">
+								<b:navLink oncomplete="$('.modalPseudoClass').modal()"
+									update="amodal">
+									<img src="images/apple-logo.png" class="img-responsive">
+									</img>
+
+									<f:param name="fileName" value="Title-01"></f:param>
+
+									<f:ajax event="click" listener="#{homeBean.setModelView}"></f:ajax>
+								</b:navLink>
+							</b:thumbnail>
+						</b:column>
+						<b:column col-xs="4" col-md="4">
+							<b:thumbnail small-screen="full">
+								<b:navLink oncomplete="$('.modalPseudoClass').modal()"
+									update="amodal">
+									<img src="images/apple-logo.png" class="img-responsive">
+									</img>
+
+									<f:param name="fileName" value="Title-02"></f:param>
+
+									<f:ajax event="click" listener="#{homeBean.setModelView}"></f:ajax>
+								</b:navLink>
+							</b:thumbnail>
+						</b:column>
+					</b:row>
+				</p:panel>
+			</b:jumbotron>
+		</b:container>
+	</h:form>
+</h:body>
+</html>

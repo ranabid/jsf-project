@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" xmlns:b="http://bootsfaces.net/ui">
+
+<h:head>
+	<title>Upload</title>
+</h:head>
+<h:outputStylesheet library="css" name="style.css" />
+<h:body style="padding-top: 50px;">
+	<b:form inline="true">
+		<b:container>
+			<b:row>
+				<b:panelGrid colSpans="8,4" size="sm">
+					<b:panel look="primary" style="height: 500px;">
+
+						<b:inputText label="File name" labelStyle="width:100px;">
+						</b:inputText>
+						<br></br>
+						<br></br>
+
+						<b:inputTextarea placeholder="Type something here..."
+							label="Description" labelStyle="width:100px;">
+						</b:inputTextarea>
+
+					</b:panel>
+					<b:panel look="primary" style="height: 500px;">
+
+						<b:row>
+							<b:column col-md="12">
+								<div class="input-group">
+
+									<label class="input-group-btn"> <span
+										class="btn btn-primary"> Browse<input type="file"
+											style="display: none;"></input></span>
+									</label> <input type="text" class="form-control"></input> <label
+										class="input-group-btn"> <span class="btn btn-info">
+											Preview<input type="button" style="display: none;"></input>
+									</span>
+									</label>
+
+
+								</div>
+							</b:column>
+
+						</b:row>
+						<br></br>
+						<b:row>
+
+							<b:column col-md="12">
+								<div class="thumbnail img-thumbnail">
+									<img src="https://static.pexels.com/photos/3247/nature-forest-industry-rails.jpg"
+										alt="Generic placeholder thumbnail" class="img-responsive"></img>
+										<div class="caption">
+									<h3>Thumbnail label</h3>
+								</div>
+								</div>
+
+								
+							</b:column>
+
+						</b:row>
+					</b:panel>
+				</b:panelGrid>
+			</b:row>
+			<b:row>
+				<b:panelGrid colSpans="8,4" size="sm">
+					<b:panel></b:panel>
+					<b:buttonGroup pull="right">
+						<b:button value="Left" />
+						<b:button value="Middle" />
+						<b:button value="Right" />
+					</b:buttonGroup>
+				</b:panelGrid>
+
+
+			</b:row>
+		</b:container>
+	</b:form>
+</h:body>
+
+</html>
